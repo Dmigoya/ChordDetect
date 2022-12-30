@@ -23,7 +23,8 @@ public class ChordDetect {
         files[2] = "logic/generalUseful.pl";
         files[3] = "logic/userfulChord.pl";
         Conexion c = new Conexion(files);
-        System.out.println(c.getChordName("C#7"));
+        JFrame jFrame = new JFrame(c);
+        jFrame.setVisible(true);
     }
 
 }

@@ -1,3 +1,6 @@
+%Caso Base
+chordWithNotes(_, _, []).
+
 %Do Mayor
 chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='C'; NameL='Do Mayor'),ListNotas=['C','E','G'],!.
 chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='C'; NameL='Do Mayor'), member(X, ['C','E','G']), 
