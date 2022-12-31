@@ -1,110 +1,65 @@
-%Caso Base
-chordWithNotes(_, _, []).
-
 %Do Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='C'; NameL='Do Mayor'),ListNotas=['C','E','G'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='C'; NameL='Do Mayor'), member(X, ['C','E','G']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('C', 'Do Mayor', ['C','E','G']).
 
 %Re Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='D'; NameL='Re Mayor'),ListNotas=['D','F#','A'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='D'; NameL='Re Mayor'), member(X, ['D','F#','A']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('D', 'Re Mayor', ['D','F#','A']).
 
 %Mi Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='E'; NameL='Mi Mayor'),ListNotas=['E','G#','B'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='E'; NameL='Mi Mayor'), member(X, ['E','G#','B']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('E', 'Mi Mayor', ['E','G#','B']).
 
 %Fa Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='F'; NameL='Fa Mayor'),ListNotas=['F','A','C'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='F'; NameL='Fa Mayor'), member(X, ['F','A','C']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('F', 'Fa Mayor', ['F','A','C']).
 
 %Sol Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='G'; NameL='Sol Mayor'),ListNotas=['G','B','D'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='G'; NameL='Sol Mayor'), member(X, ['G','B','D']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('G', 'Sol Mayor', ['G','B','D']).
 
 %La Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='A'; NameL='La Mayor'),ListNotas=['A','C#','E'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='A'; NameL='La Mayor'), member(X, ['A','C#','E']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('A', 'La Mayor', ['A','C#','E']).
 
 %Si Mayor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='B'; NameL='Si Mayor'),ListNotas=['B','D#','F#'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='B'; NameL='Si Mayor'), member(X, ['B','D#','F#']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('B', 'Si Mayor', ['B','D#','F#']).
 
 %Do Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Cm'; NameL='Do Menor'),ListNotas=['C','D#','G'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Cm'; NameL='Do Menor'), member(X, ['C','D#','G']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Cm', 'Do Menor', ['C','D#','G']).
 
 %Re Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Dm'; NameL='Re Menor'),ListNotas=['D','F','A'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Dm'; NameL='Re Menor'), member(X, ['D','F','A']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Dm', 'Re Menor', ['D','F','A']).
 
 %Mi Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Em'; NameL='Mi Menor'),ListNotas=['E','G','B'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Em'; NameL='Mi Menor'), member(X, ['E','G','B']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Em', 'Mi Menor', ['E','G','B']).
 
 %Fa Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Fm'; NameL='Fa Menor'),ListNotas=['F','G#','C'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Fm'; NameL='Fa Menor'), member(X, ['F','G#','C']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Fm', 'Fa Menor', ['F','G#','C']).
 
 %Sol Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Gm'; NameL='Sol Menor'),ListNotas=['G','A#','D'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Gm'; NameL='Sol Menor'), member(X, ['G','A#','D']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Gm', 'Sol Menor', ['G','A#','D']).
 
 %La Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Am'; NameL='La Menor'),ListNotas=['A','C','E'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Am'; NameL='La Menor'), member(X, ['A','C','E']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Am', 'La Menor', ['A','C','E']).
 
 %Si Menor
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='Bm'; NameL='Si Menor'),ListNotas=['B','D','F#'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='Bm'; NameL='Si Menor'), member(X, ['B','D','F#']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('Bm', 'Si Menor', ['B','D','F#']).
 
 %Do Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='C7'; NameL='Do Septima'),ListNotas=['C','E','G','Bb'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='C7'; NameL='Do Septima'), member(X, ['C','E','G','Bb']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('C7', 'Do Septima', ['C','E','G','Bb']).
 
 %Re Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='D7'; NameL='Re Septima'),ListNotas=['D','F#','A','C'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='D7'; NameL='Re Septima'), member(X, ['D','F#','A','C']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('D7', 'Re Septima', ['D','F#','A','C']).
 
 %Mi Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='E7'; NameL='Mi Septima'),ListNotas=['E','G#','B','D'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='E7'; NameL='Mi Septima'), member(X, ['E','G#','B','D']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('E7', 'Mi Septima', ['E','G#','B','D']).
 
 %Fa Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='F7'; NameL='Fa Septima'),ListNotas=['F','A','C','D#'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='F7'; NameL='Fa Septima'), member(X, ['F','A','C','D#']),
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('F7', 'Fa Septima', ['F','A','C','D#']).
 
 %Sol Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='G7'; NameL='Sol Septima'),ListNotas=['G','B','D','F'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='G7'; NameL='Sol Septima'), member(X, ['G','B','D','F']), 
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('G7', 'Sol Septima', ['G','B','D','F']).
 
 %La Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='A7'; NameL='La Septima'),ListNotas=['A','C#','E','G'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='A7'; NameL='La Septima'), member(X, ['A','C#','E','G']),
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('A7', 'La Septima', ['A','C#','E','G']).
 
 %Si Septima
-chordWithNotes(Name, NameL, ListNotas):- chord(Name, NameL), (Name='B7'; NameL='Si Septima'),ListNotas=['B','D#','F#','A'],!.
-chordWithNotes(Name, NameL, [X|R]):- chord(Name, NameL), (Name='B7'; NameL='Si Septima'), member(X, ['B','D#','F#','A']),
-                                    chordWithNotes(Name, NameL, R),!.
+chordWithNotes('B7', 'Si Septima', ['B','D#','F#','A']).
 
 %acordes sostenidos
 chordWithNotes(Name, NameL, List2):- chord(Name, NameL), isSustain(Name), removeSustain(Name, Name2), chordWithNotes(Name2, _, List),
@@ -113,3 +68,10 @@ chordWithNotes(Name, NameL, List2):- chord(Name, NameL), isSustain(Name), remove
 %acordes bemoles
 chordWithNotes(Name, NameL, List2):- chord(Name, NameL), isFlat(Name), removeFlat(Name, Name2), chordWithNotes(Name2, _, List),
                                     addFlat(List, List2), !.
+
+%Caso Base
+chordWithNotes(_, _, []):- !.
+
+%Caso Notas Desordenadas
+chordWithNotes(Name, NameL, [X|R]):- chordWithNotes(Name, NameL, ListNote), member(X, ListNote), 
+                                    chordWithNotes(Name, NameL, R),!.

@@ -33,6 +33,6 @@ public abstract class Useful {
     }
     
     public static String restCharacter(String string){
-        return string.substring(1, string.length()-2);
+        return string.substring(1, string.length()-1);
     }
 }

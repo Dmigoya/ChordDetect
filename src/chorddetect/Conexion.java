@@ -33,7 +33,8 @@ public class Conexion {
     }
 
     public String getChordName(String chord) {
-        q = new Query("chord", new Term[]{new Atom(chord), new Variable("X")});
+        consulta = String.format("chordWithNotes('%s', X, _)", chord);
+        q = new Query(consulta);
         List<String> resultado = new ArrayList<>();
 
         if (!q.hasSolution()) {
@@ -48,7 +49,8 @@ public class Conexion {
     }
 
     public String getChord(String chord) {
-        q = new Query("chord", new Term[]{new Variable("X"), new Atom(chord)});
+        consulta = String.format("chordWithNotes(X, '%s', _)", chord);
+        q = new Query(consulta);
         List<String> resultado = new ArrayList<>();
 
         if (!q.hasSolution()) {
@@ -56,7 +58,7 @@ public class Conexion {
         } else {
             while (q.hasMoreSolutions()) {
                 solucion = q.nextSolution();
-                resultado.add(solucion.get("X") + "\n");
+                resultado.add(solucion.get("X").toString());
             }
         }
         return resultado.get(0);
@@ -163,9 +165,10 @@ public class Conexion {
             boolean flat = false;
             while (q.hasMoreSolutions()) {
                 solucion = q.nextSolution();
-                if (!flat) {
+                if (!flat){
                     flat = !flat;
-                    continue;
+                }else{
+                    break;
                 }
                 resultado[0] = solucion.get("NameL").toString();
                 resultado[1] = solucion.get("Notes").toString();
