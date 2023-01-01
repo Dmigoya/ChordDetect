@@ -56,6 +56,22 @@ public class JFrame extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabelchordName = new javax.swing.JLabel();
+        jFrameTonality = new javax.swing.JFrame();
+        jLabel7 = new javax.swing.JLabel();
+        jComboBoxTonalityNames = new javax.swing.JComboBox();
+        jLabelNotesTonalityNames = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jComboBoxChord1 = new javax.swing.JComboBox();
+        jComboBoxChord2 = new javax.swing.JComboBox();
+        jComboBoxChord3 = new javax.swing.JComboBox();
+        jComboBoxChord4 = new javax.swing.JComboBox();
+        jLabel9 = new javax.swing.JLabel();
+        jButtonBuscar = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        jLabelchordTonSearch = new javax.swing.JLabel();
+        jComboBoxChord5 = new javax.swing.JComboBox();
+        jComboBoxChord6 = new javax.swing.JComboBox();
+        jComboBoxChord7 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButtonNotas = new javax.swing.JButton();
@@ -256,6 +272,129 @@ public class JFrame extends javax.swing.JFrame {
                 .addContainerGap(131, Short.MAX_VALUE))
         );
 
+        jLabel7.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Tonalidades");
+        jLabel7.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jComboBoxTonalityNames.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxTonalityNames.addInputMethodListener(new java.awt.event.InputMethodListener() {
+            public void caretPositionChanged(java.awt.event.InputMethodEvent evt) {
+                jComboBoxTonalityNamesCaretPositionChanged(evt);
+            }
+            public void inputMethodTextChanged(java.awt.event.InputMethodEvent evt) {
+            }
+        });
+        jComboBoxTonalityNames.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxTonalityNamesActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setFont(new java.awt.Font("Consolas", 0, 14)); // NOI18N
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("Encontrar Tonalidad");
+        jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        jComboBoxChord1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel9.setText("Seleccione los acordes:");
+
+        jButtonBuscar.setText("Buscar");
+        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Tonalidades Encontradas: ");
+
+        jLabelchordTonSearch.setText("------------------------");
+
+        jComboBoxChord5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout jFrameTonalityLayout = new javax.swing.GroupLayout(jFrameTonality.getContentPane());
+        jFrameTonality.getContentPane().setLayout(jFrameTonalityLayout);
+        jFrameTonalityLayout.setHorizontalGroup(
+            jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jFrameTonalityLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jFrameTonalityLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jFrameTonalityLayout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelchordTonSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jFrameTonalityLayout.createSequentialGroup()
+                                .addComponent(jComboBoxChord1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxChord2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxChord3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxChord4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxChord5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxChord6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jComboBoxChord7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButtonBuscar))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jFrameTonalityLayout.createSequentialGroup()
+                        .addGroup(jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jFrameTonalityLayout.createSequentialGroup()
+                                .addComponent(jComboBoxTonalityNames, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabelNotesTonalityNames, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jFrameTonalityLayout.setVerticalGroup(
+            jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jFrameTonalityLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addGroup(jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxTonalityNames, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelNotesTonalityNames))
+                .addGap(31, 31, 31)
+                .addComponent(jLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jComboBoxChord1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxChord2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxChord3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxChord4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxChord5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxChord6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxChord7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jFrameTonalityLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabelchordTonSearch))
+                .addContainerGap(112, Short.MAX_VALUE))
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Chord Detect");
 
@@ -278,6 +417,11 @@ public class JFrame extends javax.swing.JFrame {
         });
 
         jButtonTonalidades.setText("Tonalidades");
+        jButtonTonalidades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTonalidadesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -300,7 +444,7 @@ public class JFrame extends javax.swing.JFrame {
                 .addComponent(jButtonAcordes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButtonTonalidades)
-                .addContainerGap(166, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -443,6 +587,30 @@ public class JFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jComboBoxTonalityNamesCaretPositionChanged(java.awt.event.InputMethodEvent evt) {//GEN-FIRST:event_jComboBoxTonalityNamesCaretPositionChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTonalityNamesCaretPositionChanged
+
+    private void jComboBoxTonalityNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTonalityNamesActionPerformed
+        // TODO add your handling code here:
+        String chords = c.getTonalitysChords((String)jComboBoxTonalityNames.getSelectedItem());
+        jLabelNotesTonalityNames.setText(chords);
+    }//GEN-LAST:event_jComboBoxTonalityNamesActionPerformed
+
+    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonBuscarActionPerformed
+
+    private void jButtonTonalidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTonalidadesActionPerformed
+        // TODO add your handling code here:
+        jFrameTonality.setVisible(true);
+        jFrameTonality.setBounds(0, 0, 640, 255);
+        ComboBoxModel<String> cbm = new DefaultComboBoxModel<>(c.getTonalitysName());
+        jComboBoxTonalityNames.setModel(cbm);
+        ComboBoxModel<String> cbm2 = new DefaultComboBoxModel<>(c.getChords());
+        jComboBoxChordName.setModel(cbm2);
+    }//GEN-LAST:event_jButtonTonalidadesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -450,9 +618,17 @@ public class JFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonAcordes;
+    private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonNotas;
     private javax.swing.JButton jButtonTonalidades;
     private javax.swing.JComboBox jComboBoxChord;
+    private javax.swing.JComboBox jComboBoxChord1;
+    private javax.swing.JComboBox jComboBoxChord2;
+    private javax.swing.JComboBox jComboBoxChord3;
+    private javax.swing.JComboBox jComboBoxChord4;
+    private javax.swing.JComboBox jComboBoxChord5;
+    private javax.swing.JComboBox jComboBoxChord6;
+    private javax.swing.JComboBox jComboBoxChord7;
     private javax.swing.JComboBox jComboBoxChordName;
     private javax.swing.JComboBox jComboBoxNotas;
     private javax.swing.JComboBox jComboBoxNotasName;
@@ -460,19 +636,27 @@ public class JFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox jComboBoxNote2;
     private javax.swing.JComboBox jComboBoxNote3;
     private javax.swing.JComboBox jComboBoxNote4;
+    private javax.swing.JComboBox jComboBoxTonalityNames;
     private javax.swing.JFrame jFrameChord;
     private javax.swing.JFrame jFrameNotas;
+    private javax.swing.JFrame jFrameTonality;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelChordName;
     private javax.swing.JLabel jLabelName;
     private javax.swing.JLabel jLabelNameNote;
     private javax.swing.JLabel jLabelNotesChord;
+    private javax.swing.JLabel jLabelNotesTonalityNames;
     private javax.swing.JLabel jLabelchordName;
+    private javax.swing.JLabel jLabelchordTonSearch;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

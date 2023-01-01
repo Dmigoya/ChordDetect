@@ -97,9 +97,9 @@ tonality('Am', ['Am','Bdim','C','Dm','Em','F','G']).
 tonality('Bm', ['Bm','C#dim','D','Em','F#m','G','A']).
 
 %Definir tonalidad cromatica
-tonality('Cromatica', ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']).
-tonality('Cromatica', ['Cm','C#dim','Dm','D#dim','Em','Fm','F#dim','Gm','G#dim','Am','A#dim','Bm']).
-tonality('Cromatica', ['C7','C#7','D7','D#7','E7','F7','F#7','G7','G#7','A7','A#7','B7']).
-tonality('Cromatica', ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B']).
-tonality('Cromatica', ['Cm','Dbm','Dm','Ebm','Em','Fm','Gbm','Gm','Abm','Am','Bbm','Bm']).
-tonality('Cromatica', ['C7','Db7','D7','Eb7','E7','F7','Gb7','G7','Ab7','A7','Bb7','B7']).
+tonality('Cromatica Mayor Con Sostenido', ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']).
+tonality('Cromatica Menor Con Sostenido', ['Cm','C#dim','Dm','D#dim','Em','Fm','F#dim','Gm','G#dim','Am','A#dim','Bm']).
+tonality('Cromatica Septima Con Sostenido', ['C7','C#7','D7','D#7','E7','F7','F#7','G7','G#7','A7','A#7','B7']).
+tonality('Cromatica Mayor Con Bemol', ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B']).
+tonality('Cromatica Menor Con Bemol', ['Cm','Dbm','Dm','Ebm','Em','Fm','Gbm','Gm','Abm','Am','Bbm','Bm']).
+tonality('Cromatica Septima Con Bemol', ['C7','Db7','D7','Eb7','E7','F7','Gb7','G7','Ab7','A7','Bb7','B7']).

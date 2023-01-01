@@ -213,4 +213,40 @@ public class Conexion {
         res = Useful.restCharacter(res);
         return res;
     }
+    
+    public String[] getTonalitysName() {
+        consulta = "tonality(Name, _)";
+        q = new Query(consulta);
+
+        List<String> resultado = new ArrayList<>();
+        if (!q.hasSolution()) {
+            resultado.add("No se encontraron soluciones");
+        } else {
+            while (q.hasMoreSolutions()) {
+                solucion = q.nextSolution();
+                resultado.add(solucion.get("Name").toString());
+            }
+        }
+        String[] res = Useful.convertListToString(resultado);
+        res = Useful.restCharacter(res);
+        return res;
+    }
+    
+    public String getTonalitysChords(String name) {
+        consulta = String.format("tonality('%s', Chords)", name);
+        q = new Query(consulta);
+
+        List<String> resultado = new ArrayList<>();
+        if (!q.hasSolution()) {
+            resultado.add("No se encontraron soluciones");
+        } else {
+            while (q.hasMoreSolutions()) {
+                solucion = q.nextSolution();
+                resultado.add(solucion.get("Chords").toString());
+            }
+        }
+        String[] res = Useful.convertListToString(resultado);
+        String resTmp = Detector.detect(res[0]);
+        return resTmp;
+    }
 }
