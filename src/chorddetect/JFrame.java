@@ -395,7 +395,7 @@ public class JFrame extends javax.swing.JFrame {
         String[] notesForChord = c.getNotesForChord(Useful.restCharacter(chordName));
         notesForChord = notesForChord[1].split("-");
         chordName += " notas: ";
-        for(String string : notesForChord){
+        for (String string : notesForChord) {
             chordName += string + " ";
         }
         jLabelNotesChord.setText(chordName);
@@ -408,7 +408,7 @@ public class JFrame extends javax.swing.JFrame {
         String[] notesForChord = c.getNotesForChord(position);
         notesForChord = notesForChord[1].split("-");
         chordName += " notas: ";
-        for(String string : notesForChord){
+        for (String string : notesForChord) {
             chordName += string + " ";
         }
         jLabelChordName.setText(chordName);
@@ -438,6 +438,8 @@ public class JFrame extends javax.swing.JFrame {
         jLabelchordName.setText(chord[1]);
         if (chord[1].isEmpty()) {
             jLabelchordName.setText("Notas no validas");
+        } else {
+            jLabelchordName.setText(Useful.restCharacter(chord[1]) + ", cifrado: " + Useful.restCharacter(chord[0]));
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -42,7 +42,7 @@ public class Conexion {
         } else {
             while (q.hasMoreSolutions()) {
                 solucion = q.nextSolution();
-                resultado.add(solucion.get("X") + "\n");
+                resultado.add(solucion.get("X").toString());
             }
         }
         return resultado.get(0);
@@ -73,7 +73,7 @@ public class Conexion {
         } else {
             while (q.hasMoreSolutions()) {
                 solucion = q.nextSolution();
-                resultado.add(solucion.get("X") + "\n");
+                resultado.add(solucion.get("X").toString());
             }
         }
         return resultado.get(0);
@@ -88,7 +88,7 @@ public class Conexion {
         } else {
             while (q.hasMoreSolutions()) {
                 solucion = q.nextSolution();
-                resultado.add(solucion.get("X") + "\n");
+                resultado.add(solucion.get("X").toString());
             }
         }
         return resultado.get(0);

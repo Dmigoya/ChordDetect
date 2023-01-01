@@ -6,3 +6,6 @@ string_split(String, List):- split_string(String, ' ', '', List).
 
 %tomar primer elemento de la lista
 getFirstToList([X|_], X).
+
+toString([], '').
+toString([X|R], String):- toString(R, String1), concat(X, String1, String).
