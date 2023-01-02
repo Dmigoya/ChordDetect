@@ -505,29 +505,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Seleccione los acordes:"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="jButtonBuscar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Buscar"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBuscarActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Tonalidades Encontradas: "/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabelchordTonSearch">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="------------------------"/>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JComboBox" name="jComboBoxChord5">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
@@ -562,6 +539,29 @@
                 <StringItem index="3" value="Item 4"/>
               </StringArray>
             </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Seleccione los acordes:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonBuscar">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Buscar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBuscarActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Tonalidades Encontradas: "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabelchordTonSearch">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="------------------------"/>
           </Properties>
         </Component>
       </SubComponents>

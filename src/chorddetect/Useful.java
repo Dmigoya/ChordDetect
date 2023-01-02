@@ -35,4 +35,18 @@ public abstract class Useful {
     public static String restCharacter(String string){
         return string.substring(1, string.length()-1);
     }
+    
+    public static String arrayToStringForConsult(String[] array){
+        String[] arrayTmp = new String[array.length];
+        for (int i = 0; i < array.length; i++) {
+            arrayTmp[i]= "'" + array[i] + "'";
+        }
+        String ret = "";
+        for (String a : arrayTmp) {
+            ret += a + ", ";
+        }
+        ret = ret.substring(0, ret.length()-2);
+        ret = "[" + ret + "]";
+        return ret;
+    }
 }

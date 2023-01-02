@@ -249,4 +249,40 @@ public class Conexion {
         String resTmp = Detector.detect(res[0]);
         return resTmp;
     }
+    
+    public String[] getIsTonality(String[] name) {
+        String arrayString = Useful.arrayToStringForConsult(name);
+        consulta = String.format("isTonality(%s, Names)", arrayString);
+        q = new Query(consulta);
+
+        List<String> resultado = new ArrayList<>();
+        if (!q.hasSolution()) {
+            resultado.add("No se encontraron soluciones");
+        } else {
+            while (q.hasMoreSolutions()) {
+                solucion = q.nextSolution();
+                resultado.add(solucion.get("Names").toString());
+            }
+        }
+        String[] res = Useful.convertListToString(resultado);
+        return res;
+    }
+    
+    public String getAllChords() {
+        consulta = String.format("chords(C)");
+        q = new Query(consulta);
+
+        List<String> resultado = new ArrayList<>();
+        if (!q.hasSolution()) {
+            resultado.add("No se encontraron soluciones");
+        } else {
+            while (q.hasMoreSolutions()) {
+                solucion = q.nextSolution();
+                resultado.add(solucion.get("C").toString());
+            }
+        }
+        String[] res = Useful.convertListToString(resultado);
+        String resTmp = Detector.detect(res[0]);
+        return resTmp;
+    }
 }

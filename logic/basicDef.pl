@@ -103,3 +103,10 @@ tonality('Cromatica Septima Con Sostenido', ['C7','C#7','D7','D#7','E7','F7','F#
 tonality('Cromatica Mayor Con Bemol', ['C','Db','D','Eb','E','F','Gb','G','Ab','A','Bb','B']).
 tonality('Cromatica Menor Con Bemol', ['Cm','Dbm','Dm','Ebm','Em','Fm','Gbm','Gm','Abm','Am','Bbm','Bm']).
 tonality('Cromatica Septima Con Bemol', ['C7','Db7','D7','Eb7','E7','F7','Gb7','G7','Ab7','A7','Bb7','B7']).
+
+chords(['C','C#','D','D#','E','F','F#','G','G#','A','A#','B',
+        'Cm','C#dim','Dm','D#dim','Em','Fm','F#dim','Gm','G#dim','Am','A#dim','Bm',
+        'C7','C#7','D7','D#7','E7','F7','F#7','G7','G#7','A7','A#7','B7',
+        'Db','Eb','Gb','Ab','Bb',
+        'Dbm','Ebm','Gbm','Abm','Bbm', 
+        'Db7','Eb7','Gb7','Ab7','Bb7']).

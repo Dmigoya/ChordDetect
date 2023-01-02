@@ -5,6 +5,8 @@
  */
 package chorddetect;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.ComboBoxModel;
 import javax.swing.DefaultComboBoxModel;
 
@@ -65,13 +67,13 @@ public class JFrame extends javax.swing.JFrame {
         jComboBoxChord2 = new javax.swing.JComboBox();
         jComboBoxChord3 = new javax.swing.JComboBox();
         jComboBoxChord4 = new javax.swing.JComboBox();
+        jComboBoxChord5 = new javax.swing.JComboBox();
+        jComboBoxChord6 = new javax.swing.JComboBox();
+        jComboBoxChord7 = new javax.swing.JComboBox();
         jLabel9 = new javax.swing.JLabel();
         jButtonBuscar = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         jLabelchordTonSearch = new javax.swing.JLabel();
-        jComboBoxChord5 = new javax.swing.JComboBox();
-        jComboBoxChord6 = new javax.swing.JComboBox();
-        jComboBoxChord7 = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButtonNotas = new javax.swing.JButton();
@@ -304,6 +306,12 @@ public class JFrame extends javax.swing.JFrame {
 
         jComboBoxChord4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        jComboBoxChord5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBoxChord7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         jLabel9.setText("Seleccione los acordes:");
 
         jButtonBuscar.setText("Buscar");
@@ -316,12 +324,6 @@ public class JFrame extends javax.swing.JFrame {
         jLabel10.setText("Tonalidades Encontradas: ");
 
         jLabelchordTonSearch.setText("------------------------");
-
-        jComboBoxChord5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBoxChord6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jComboBoxChord7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout jFrameTonalityLayout = new javax.swing.GroupLayout(jFrameTonality.getContentPane());
         jFrameTonality.getContentPane().setLayout(jFrameTonalityLayout);
@@ -593,12 +595,36 @@ public class JFrame extends javax.swing.JFrame {
 
     private void jComboBoxTonalityNamesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTonalityNamesActionPerformed
         // TODO add your handling code here:
-        String chords = c.getTonalitysChords((String)jComboBoxTonalityNames.getSelectedItem());
+        String chords = c.getTonalitysChords((String) jComboBoxTonalityNames.getSelectedItem());
         jLabelNotesTonalityNames.setText(chords);
     }//GEN-LAST:event_jComboBoxTonalityNamesActionPerformed
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
+        List<String> l = new ArrayList();
+        if (!"".equals((String)jComboBoxChord1.getSelectedItem())){
+            l.add((String)jComboBoxChord1.getSelectedItem());
+        }
+        if (!"".equals((String)jComboBoxChord2.getSelectedItem())){
+            l.add((String)jComboBoxChord2.getSelectedItem());
+        }
+        if (!"".equals((String)jComboBoxChord3.getSelectedItem())){
+            l.add((String)jComboBoxChord3.getSelectedItem());
+        }
+        if (!"".equals((String)jComboBoxChord4.getSelectedItem())){
+            l.add((String)jComboBoxChord4.getSelectedItem());
+        }
+        if (!"".equals((String)jComboBoxChord5.getSelectedItem())){
+            l.add((String)jComboBoxChord5.getSelectedItem());
+        }
+        if (!"".equals((String)jComboBoxChord6.getSelectedItem())){
+            l.add((String)jComboBoxChord6.getSelectedItem());
+        }
+        if (!"".equals((String)jComboBoxChord7.getSelectedItem())){
+            l.add((String)jComboBoxChord7.getSelectedItem());
+        }
+        String[] text = c.getIsTonality(Useful.convertListToString(l));
+        jLabelchordTonSearch.setText(Useful.arrayToStringForConsult(text));
     }//GEN-LAST:event_jButtonBuscarActionPerformed
 
     private void jButtonTonalidadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTonalidadesActionPerformed
@@ -607,8 +633,19 @@ public class JFrame extends javax.swing.JFrame {
         jFrameTonality.setBounds(0, 0, 640, 255);
         ComboBoxModel<String> cbm = new DefaultComboBoxModel<>(c.getTonalitysName());
         jComboBoxTonalityNames.setModel(cbm);
-        ComboBoxModel<String> cbm2 = new DefaultComboBoxModel<>(c.getChords());
-        jComboBoxChordName.setModel(cbm2);
+        String[] nameChordsTmp = c.getChords();
+        String[] nameChords = new String[c.getChords().length + 1];
+        nameChords[0] = "";
+        for (int i = 0; i < c.getChords().length; i++) {
+            nameChords[i + 1] = nameChordsTmp[i];
+        }
+        jComboBoxChord1.setModel(new DefaultComboBoxModel<>(nameChords));
+        jComboBoxChord2.setModel(new DefaultComboBoxModel<>(nameChords));
+        jComboBoxChord3.setModel(new DefaultComboBoxModel<>(nameChords));
+        jComboBoxChord4.setModel(new DefaultComboBoxModel<>(nameChords));
+        jComboBoxChord5.setModel(new DefaultComboBoxModel<>(nameChords));
+        jComboBoxChord6.setModel(new DefaultComboBoxModel<>(nameChords));
+        jComboBoxChord7.setModel(new DefaultComboBoxModel<>(nameChords));
     }//GEN-LAST:event_jButtonTonalidadesActionPerformed
 
     /**
