@@ -1,5 +1,6 @@
 %Dada la tonalidad y un acorde devolver el grado del acorde en la tonalidad
-degreeInTonality(Tonality, Chord, Degree):- tonality(Tonality, ListChords), member(Chord, ListChords), 
+degreeInTonality(Tonality, Chord, Degree):- tonality(LTon, ListChords), string_split(LTon, [L|_]), 
+                                            toString([L], Tonality), member(Chord, ListChords), 
                                             nth1(Degree, ListChords, Chord),!.
 
 %reconocer si un acorde es sostenido
