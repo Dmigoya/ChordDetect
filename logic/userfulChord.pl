@@ -26,3 +26,5 @@ addFlat([], []).
 addFlat([X|L], [X2|L2]):- degreeInTonality('Cromatica', X, Degree), Degree2 is Degree - 1, Degree2>=1,
                         degreeInTonality('Cromatica', X2, Degree2), addFlat(L, L2);
                         degreeInTonality('Cromatica', X2, 12), addFlat(L, L2).
+
+allchords(X):- findall(Y, chord(Y, _), X).
